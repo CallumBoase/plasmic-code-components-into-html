@@ -1,5 +1,6 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld } from "./components/plasmicCodeComponents/HelloWorld";
+// import { HelloWorld } from "./components/plasmicCodeComponents/HelloWorld";
+import { HelloWorld } from "https://github.com/CallumBoase/plasmic-code-components-into-html/blob/main/components/plasmicCodeComponents/HelloWorld.tsx";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plasmic</title>
+  <script src="https://render-plasmic-into-html.netlify.app/customComponents.js">  </script>
+</head>
+
+<body>
+  <div id="plasmic"></div>
+  <script>
+
+    window.customComponents.render.plasmicComponent({
+      //The ID of your div to render Plasmic inside
+      targetDiv: 'plasmic',
+      //Decide if you want to render into a ShadowDOM (to isolate Plamic from external styles on your page)
+      useShadowDOM: false,
+      //Your plasmic project token obtained from the plasmic studio URL
+      projectId: '2p9oB1SXqjCfjY5GhqfXkW',
+      //Your plasmic project's public token obtained from plasmic studio -> Code button
+      publicToken: 'pUCg6B0WATaOclaotobprQoK6O9QeupmUOHsJeoRic9vOjAYnMLJlL5kpt9BsGVsahrXC39tJRSJ8f5zbT6w',
+      //true/false whether or not to render the latest changes (even if not published yet)
+      preview: false,
+      //The name of your plasmic component to render
+      component: 'HelloWorld',
+      //Any props to pass into your component 
+      componentProps: {}//Props to pass to the component or page
+    });
+
+  </script>
+
+</body>
+
+</html>
