@@ -11,35 +11,30 @@
   <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
   <!-- Load Exported components -->
   <script src="./public/components-bundle.js"></script>
+  <script src="./public/renderReactComponent.js"></script>
 </head>
 
 <body>
-  <div id="target"></div>
+  <div id="hello"></div>
+  <div id="plasmic"></div>
   <script>
 
-    console.log(MyNextComponents)
-    const { HelloWorld } = MyNextComponents;
-    console.log(HelloWorld);
-    const target = document.getElementById('target');
-    const element = React.createElement(HelloWorld, { verbose: true });
-    ReactDOM.render(element, target);
+    renderReactComponent({
+      component: MyNextComponents.HelloWorld,
+      targetSelector: '#hello',
+      props: { verbose: true },
+      useShadowDom: false
+    })
 
-    // window.customComponents.render.plasmicComponent({
-    //   //The ID of your div to render Plasmic inside
-    //   targetDiv: 'plasmic',
-    //   //Decide if you want to render into a ShadowDOM (to isolate Plamic from external styles on your page)
-    //   useShadowDOM: false,
-    //   //Your plasmic project token obtained from the plasmic studio URL
-    //   projectId: '2p9oB1SXqjCfjY5GhqfXkW',
-    //   //Your plasmic project's public token obtained from plasmic studio -> Code button
-    //   publicToken: 'pUCg6B0WATaOclaotobprQoK6O9QeupmUOHsJeoRic9vOjAYnMLJlL5kpt9BsGVsahrXC39tJRSJ8f5zbT6w',
-    //   //true/false whether or not to render the latest changes (even if not published yet)
-    //   preview: false,
-    //   //The name of your plasmic component to render
-    //   component: 'Homepage',
-    //   //Any props to pass into your component 
-    //   componentProps: {}//Props to pass to the component or page
-    // });
+    renderReactComponent({
+      component: MyNextComponents.PlasmicComponentLoader,
+      targetSelector: '#plasmic',
+      props: {
+        component: 'Homepage',
+        componentProps: {}
+      },
+      useShadowDom: false
+    })
 
   </script>
 
