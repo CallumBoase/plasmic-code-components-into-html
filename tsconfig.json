@@ -16,6 +16,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "plasmic-init.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "plasmic-init.js", "components/PlasmicLoader.js", "components/plasmicCodeComponents/HelloWorld.jsx"],
   "exclude": ["node_modules"]
 }
