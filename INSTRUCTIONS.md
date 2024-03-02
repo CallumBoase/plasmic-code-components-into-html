@@ -6,11 +6,11 @@
 3. create plasmic-settings.js and move most of what's in plasmic-init.js to there
 4. modify plasmic-init.js to use the new plasmic-settings.js as shown there
 5. create plasmic-init-react.js which should contain same as plasmic-init.js but use @plasmicapp/loader-react instead of @plasmicapp-loader-nextjs
-6. modify package.json. add build-components script, add the build-components script to build as well
+6. modify package.json. add build-components script, add the build-components script to the default `build` script as well
 7. add helper function renderReactComponent.js to public
 8. Add code components as needed, registering them in plasmic-settings.js instead of plasmic-host.js
 9. Update app host in Plasmic
-10. Add PlasmicComponentLoader.js (shouldn't need to change)
+10. Add PlasmicComponentLoader.js (as shown in this repo). Note it's different to the version in plasmic-into-html because the project id and key etc is not an argument.
 11. add components-export.js and choose what components and export PlasmicCOmponentLoader.js at minimum
 12. run npm run build-components and test it out as shown in tmp.html
 13. Run npm run build and it should all work
